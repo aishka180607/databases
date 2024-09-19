@@ -11,7 +11,7 @@ INSERT INTO countries(country_name) VALUES ('Uk');
 INSERT INTO countries(country_name,region_id,population) VALUES ('Unknown',NULL,90000);
 INSERT INTO countries(country_name,region_id,population) VALUES ('Usa',2,8000000),('Europa',3,67000),('Korea',4,5000000);
 alter table countries alter column country_name set default 'kazakhstan';
-insert into countries(country_name, region_id, population) VALUES (default,5,650000)
+insert into countries(country_name, region_id, population) VALUES (default,5,650000);
 insert into countries default values ;
 CREATE TABLE countries_new AS TABLE countries WITH NO DATA;
 INSERT INTO countries_new select * from countries;
