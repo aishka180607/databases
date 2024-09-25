@@ -6,7 +6,7 @@ CREATE TABLE users1(
     lastname VARCHAR(50)
 );
 ALTER TABLE users1
-ADD isadmin INT ;
+ADD COLUMN isadmin INT DEFAULT 1;
 
 ALTER TABLE users1
 ALTER COLUMN isadmin DROP DEFAULT;
