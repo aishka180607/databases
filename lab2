@@ -16,7 +16,9 @@ insert into countries default values ;
 CREATE TABLE countries_new AS TABLE countries WITH NO DATA;
 INSERT INTO countries_new select * from countries;
 update countries set region_id=1 where region_id is null;
-update countries set population=population * 1.1 returning country_name,population as "New_populations";
+update countries set population=population * 1.1 returning country_name,population as "New_populations"; 
+или
+SELECT country_name, population * 1.10 AS "New Population" FROM countries;
 delete from countries where population<100000;
 delete from countries_new using countries where countries.country_id=countries_new.country_id returning countries_new.*;
 delete from countries returning *;
