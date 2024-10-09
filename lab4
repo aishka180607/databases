@@ -8,8 +8,7 @@ CREATE TABLE Boxes (
     code CHAR(4) PRIMARY KEY,
     contents VARCHAR(255),
     value REAL,
-    warehouse INTEGER,
-    FOREIGN KEY (warehouse) REFERENCES Warehouses(code)
+    warehouse INTEGER
 );
 INSERT INTO Warehouses (code, location, capacity) VALUES
 (1, 'Chicago', 3),
