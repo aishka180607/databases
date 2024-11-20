@@ -63,7 +63,7 @@ GRANT ALL PRIVILEGES ON order_details TO junior_dev;
 CREATE VIEW max_grade AS
 SELECT * FROM customers WHERE grade = (SELECT MAX(grade) FROM customers);
 
-GRANT SELECT ON max_grade_customers TO junior_dev;
+GRANT SELECT ON max_grade TO junior_dev;
 --7
 CREATE VIEW salesman_count AS SELECT city, COUNT(*) AS salesman_count FROM salesman
 GROUP BY city;
